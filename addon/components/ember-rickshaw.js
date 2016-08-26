@@ -7,19 +7,17 @@ export default Ember.Component.extend({
     var data = this.get('data');
     var options = this.get('options');
     var graph = new Rickshaw.Graph( {
-      element: document.querySelector("#chart"), 
+      element: this.element, 
       width: this.get("width"), 
       height: this.get("height"),
-      renderer: this.get('renderer'),
-      series: [{
-        color: 'steelblue',
-        data: data
-      }]});
+      // renderer: "line",
+      series: data
+    });
     graph.render();
     this.set('graph', graph);
-    this.addObserver('data', this, this.updateChart);
-    this.addObserver('data.[]', this, this.updateChart);
-    this.addObserver('options', this, this.updateChart);
+    this.addObserver('data', this, this.updateGraph);
+    this.addObserver('data.[]', this, this.updateGraph);
+    this.addObserver('options', this, this.updateGraph);
   },
   
 
