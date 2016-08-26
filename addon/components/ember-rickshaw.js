@@ -10,7 +10,7 @@ export default Ember.Component.extend({
       element: this.element, 
       width: this.get("width"), 
       height: this.get("height"),
-      // renderer: "line",
+      renderer: this.get("type"),
       series: data
     });
     graph.render();
