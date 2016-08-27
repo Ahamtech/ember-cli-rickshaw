@@ -1,3 +1,3 @@
-import EmberRickshaw from 'ember-cli-chart/components/ember-rickshaw';
+import EmberRickshaw from 'ember-rickshaw/components/ember-rickshaw';
 
 export default EmberRickshaw;
