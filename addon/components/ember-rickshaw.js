@@ -19,8 +19,12 @@ export default Ember.Component.extend({
     this.addObserver('options', this, this.updateGraph);
 
   },
-  updateGraph(){
-      this.get("graph").update();
+  updateGraph(graph_data){
+    let graph = this.get("graph");
+    graph_data.data.forEach(function(data,index){
+      graph.series[index]=data;
+    });
+    graph.update();
   }
 
 
