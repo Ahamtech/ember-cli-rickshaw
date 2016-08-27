@@ -12,9 +12,13 @@ export default Ember.Component.extend({
       renderer: this.get("type"),
       series: data
     });
+    if(this.get("hover") == true){
+      new Rickshaw.Graph.HoverDetail({
+        graph: graph
+      });
+    }
     graph.render();
     this.set('graph', graph);
-    this.addObserver('data', this, this.updateGraph);
     this.addObserver('data.[]', this, this.updateGraph);
     this.addObserver('options', this, this.updateGraph);
 
