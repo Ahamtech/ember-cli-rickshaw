@@ -18,6 +18,7 @@ export default Ember.Component.extend({
     this.addObserver('data', this, this.updateGraph);
     this.addObserver('data.[]', this, this.updateGraph);
     this.addObserver('options', this, this.updateGraph);
+    
   },
   
 
