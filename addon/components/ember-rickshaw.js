@@ -17,6 +17,17 @@ export default Ember.Component.extend({
         graph: graph
       });
     }
+    if(this.get("axistime")){
+      new Rickshaw.Graph.Axis.Time({
+        graph: graph
+      });
+    }
+    if(this.get("slider")){
+      new Rickshaw.Graph.RangeSlider.Preview({
+        graph: graph,
+        element: document.querySelector("#" + this.get("slider-element"))
+      });
+    }
     graph.render();
     this.set('graph', graph);
     this.addObserver('data.[]', this, this.updateGraph);
