@@ -15,6 +15,8 @@ This README outlines the details of collaborating on this Ember addon.
 {{#ember-rickshaw type="lineplot" height="600" width="1300" data=model hover=true}}
 ```
 
+
+
 ## Ember Hover
 
 ```handlebars
@@ -32,7 +34,7 @@ This README outlines the details of collaborating on this Ember addon.
 		return content;
 	}}
 ```
-
+![alt hover](screenshots/hover-details.png)
 
 ## Ember Slider
 
@@ -40,6 +42,7 @@ This README outlines the details of collaborating on this Ember addon.
 {{#ember-rickshaw type="lineplot" height="600" width="1300" data=model hover=true slider=true slider-element="ember-slider"}}
 <div id="ember-slider"></div>
 ```
+![alt slider](screenshots/slider.png)
 
 ## Ember Axis Time
 
@@ -53,7 +56,6 @@ This README outlines the details of collaborating on this Ember addon.
 {{#ember-rickshaw type="lineplot" height="600" width="1300" data=model hover=true legend=true legend-element="legend" legend-highlight=true}}
 <div class="column" id="legend"></div>
 ```
-![legend]screenshots/annotator.png
 
 ## Ember Annotator
 
@@ -61,5 +63,5 @@ This README outlines the details of collaborating on this Ember addon.
 {{#ember-rickshaw type="lineplot" height="600" width="1300" data=model hover=true axistime=true hover-option=hoverformatter annotator=true annotator-element="annotator" annotator-data=annatator}}
 
 <div id="annotator"></div>
-
 ```
+![alt annotator](screenshots/annotator.png)
