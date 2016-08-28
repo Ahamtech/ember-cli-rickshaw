@@ -67,7 +67,6 @@ export default Ember.Component.extend({
       } );
       this.get("annotator-data").forEach(
           function (data) {
-            console.log(data);
             annotator.add(data[0],data[1]);
           }
         );
