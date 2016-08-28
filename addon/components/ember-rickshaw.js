@@ -28,6 +28,23 @@ export default Ember.Component.extend({
         element: document.querySelector("#" + this.get("slider-element"))
       });
     }
+    if(this.get("legend")){
+      let legend = new Rickshaw.Graph.Legend({
+        graph: graph,
+        element: document.querySelector("#" + this.get("legend-element"))
+      });
+      if(this.get("legend-highlight")){
+        new Rickshaw.Graph.Behavior.Series.Highlight({
+          graph: graph,
+          legend: legend,
+          disabledColor: function() { return 'rgba(0, 0, 0, 0.2)' }
+        });
+        new Rickshaw.Graph.Behavior.Series.Toggle({
+          graph: graph,
+          legend: legend
+        });
+      }
+    }
     graph.render();
     this.set('graph', graph);
     this.addObserver('data.[]', this, this.updateGraph);

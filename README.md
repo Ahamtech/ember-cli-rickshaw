@@ -28,3 +28,10 @@ This README outlines the details of collaborating on this Ember addon.
 ```handlebars
 {{#ember-rickshaw type="lineplot" height="600" width="1300" data=model hover=true axistime=true }}
 ```
+
+## Ember Legend
+
+```handlebars
+{{#ember-rickshaw type="lineplot" height="600" width="1300" data=model hover=true legend=true legend-element="legend" legend-highlight=true}}
+<div class="column" id="legend"></div>
+```
