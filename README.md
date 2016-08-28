@@ -8,6 +8,14 @@ This README outlines the details of collaborating on this Ember addon.
 * `npm install`
 * `bower install`
 
+
+## Ember Hover
+
+```handlebars
+{{#ember-rickshaw type="lineplot" height="600" width="1300" data=model hover=true}}
+```
+
+
 ## Ember Slider
 
 ```handlebars
@@ -15,10 +23,7 @@ This README outlines the details of collaborating on this Ember addon.
 <div id="ember-slider"></div>
 ```
 
-
-
-
-## Ember Slider
+## Ember Axis Time
 
 ```handlebars
 {{#ember-rickshaw type="lineplot" height="600" width="1300" data=model hover=true axistime=true }}
