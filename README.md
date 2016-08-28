@@ -8,19 +8,9 @@ This README outlines the details of collaborating on this Ember addon.
 * `npm install`
 * `bower install`
 
-## Running
+## Ember Slider
 
-* `ember serve`
-* Visit your app at http://localhost:4200.
+*  
+* {{#ember-rickshaw type="lineplot" height="600" width="1300" data=model hover=true axistime=true slider=true slider-element="ember-slider"}}
 
-## Running Tests
-
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+* <div id="ember-slider"></div>
