@@ -48,6 +48,33 @@ export default Ember.Component.extend({
         });
       }
     }
+    if(this.get("y-axis")){
+      var yaxis = new Rickshaw.Graph.Axis.Y({
+        graph: graph
+      });
+      yaxis.render();
+    }
+    if(this.get("x-axis")){
+      var xaxis = new Rickshaw.Graph.Axis.X({
+        graph: graph
+      });
+      xaxis.render();
+    }
+    if(this.get("annotator")){
+      let annotator = new Rickshaw.Graph.Annotate( {
+        graph: graph,
+        element: document.querySelector("#" + this.get("annotator-element"))
+      } );
+      this.get("annotator-data").forEach(
+          function (data) {
+            console.log(data);
+            annotator.add(data[0],data[1]);
+          }
+        );
+      annotator.update();
+      this.addObserver('annotator-data.[]', this, this.updateAnnotator);
+      this.set("annotator", annotator);
+    }
     graph.render();
     this.set('graph', graph);
     this.addObserver('data.[]', this, this.updateGraph);
@@ -60,7 +87,13 @@ export default Ember.Component.extend({
       graph.series[index]=data;
     });
     graph.update();
+  },
+
+  updateAnnotator(update_data){
+    let annotator = this.get("annotator");
+    update_data.data.forEach(function(data,index){
+      annotator.add(data);
+    });
+    annotator.update();
   }
-
-
 });
