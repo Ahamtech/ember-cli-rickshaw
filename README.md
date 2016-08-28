@@ -11,6 +11,12 @@ This README outlines the details of collaborating on this Ember addon.
 ## Ember Slider
 
 *  
-* {{#ember-rickshaw type="lineplot" height="600" width="1300" data=model hover=true axistime=true slider=true slider-element="ember-slider"}}
+* {{#ember-rickshaw type="lineplot" height="600" width="1300" data=model hover=true slider=true slider-element="ember-slider"}}
 
 * <div id="ember-slider"></div>
+
+
+## Ember Slider
+
+*  
+* {{#ember-rickshaw type="lineplot" height="600" width="1300" data=model hover=true axistime=true }}
