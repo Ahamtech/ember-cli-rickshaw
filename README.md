@@ -1,13 +1,23 @@
 # Ember-rickshaw
 
-This README outlines the details of collaborating on this Ember addon.
+Ember implementation for rickshaw
+Timeseries graphs done right in Rickshaw
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* `npm install https://github.com/Ahamtech/ember-rickshaw.git#master`
+* `bower install rickshaw`
 
+##TODO
+Better Documentation
+
+Support for Multi Axis representation
+
+Better start up code snipperts
+
+Demo App
+
+Adding into NPM repo
 
 ## Ember Hover
 
