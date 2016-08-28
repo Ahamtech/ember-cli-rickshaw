@@ -13,9 +13,12 @@ export default Ember.Component.extend({
       series: data
     });
     if(this.get("hover")){
-      new Rickshaw.Graph.HoverDetail({
-        graph: graph
-      });
+      let options = {};
+      if (this.get("hover-option")){
+        options = this.get("hover-option");
+      }
+      options.graph = graph;
+      new Rickshaw.Graph.HoverDetail(options);
     }
     if(this.get("axistime")){
       new Rickshaw.Graph.Axis.Time({
