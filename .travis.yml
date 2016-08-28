@@ -26,6 +26,7 @@ before_install:
   - npm install -g bower
   - bower --version
   - npm install phantomjs-prebuilt
+  - bower install rickshaw
   - phantomjs --version
 
 install:
