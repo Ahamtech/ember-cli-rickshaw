@@ -44,7 +44,8 @@
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.6"
+    "ember-cli-babel": "^5.1.6",
+    "rickshaw": "^1.6.0-rc.0"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
